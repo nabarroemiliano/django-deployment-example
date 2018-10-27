@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% extends "users_list/base.html" %}
+{%block body_block%}
+    <h1>List of Users!</h1>
+    <!-- <div class="container">
+      <h1>This is all the users!</h1>
+      <form  method="POST">
+          {{form.as_p}}
+          {% csrf_token %}
+          <input type="submit" name="" value="Submit">
+      </form>
+    </div> -->
+    {% if users %}
+      <ol>
+        {% for person in users %}
+
+        <li>User info</li>
+          <ul>
+            <li>UserName: {{person.user}}</li>
+            <li>Last Name: {{person.portfolio_site}}</li>
+            <li> Email: {{person.user.email}}</li>
+          </ul>
+          {% endfor %}
+      </ol>
+    {% endif %}
+
+    {%endblock%}

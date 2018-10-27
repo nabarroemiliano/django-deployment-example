@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends "users_list/base.html" %}
+{%block body_block%}
+
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Welcome to Users Web Page!</h1>
+        {{valor}}
+        <br>
+        <a href="{% url 'users_list:users' %}"> List of Users </a>
+        <br>
+        <a href="{% url 'users_list:register' %}"> Register a new User</a>
+      </div>
+
+    </div>
+{%endblock%}
